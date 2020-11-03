@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="CustomerModule">
+    <head>
+        <title>Phase2 Index</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/angular.min.js"></script>
+        <script src="js/angular-resource.min.js"></script>
+        <script src="js/createAccount.js"></script>
+    </head>
+    <body>  
+        <div ng-controller="CustomerController as customerCtrl">
+            <h1>Add a new Customer</h1>
+            <fieldset>
+            <legend>Customer Details</legend>
+            <form ng-submit="customerCtrl.createAccount(customer)">
+            <label>Email:</label>
+            <input type="text" ng-model="customer.email">
+            <label>Username:</label>
+            <input type="text" ng-model="customer.username">
+            <label>First Name:</label>
+            <input type="text" ng-model="customer.firstName">
+            <label>Surname:</label>
+            <input type="text" ng-model="customer.lastName">
+            <button>Add New Customer</button>
+            </form>
+            </fieldset>
+        </div>
+    </body>
+</html>
